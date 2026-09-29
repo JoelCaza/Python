@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main class="dashboard-card">
+        <p class="eyebrow">PANEL DE CONTROL</p>
+        <h1>Hola, {{ username }}</h1>
+        <p class="subtitle">Has iniciado sesion correctamente.</p>
+        <form method="post" action="{{ url_for('logout') }}">
+            <button class="secondary" type="submit">Cerrar sesion</button>
+        </form>
+    </main>
+</body>
+</html>

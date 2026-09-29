@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iniciar sesion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main class="auth-card">
+        <p class="eyebrow">PORTAL PRIVADO</p>
+        <h1>Iniciar sesion</h1>
+        <p class="subtitle">Accede con tus credenciales para continuar.</p>
+
+        {% if error %}
+            <div class="alert" role="alert">{{ error }}</div>
+        {% endif %}
+
+        <form method="post">
+            <label for="username">Usuario</label>
+            <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+
+            <label for="password">Contrasena</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <p class="demo-hint">Demo: <strong>admin</strong> / <strong>python123</strong></p>
+    </main>
+</body>
+</html>
